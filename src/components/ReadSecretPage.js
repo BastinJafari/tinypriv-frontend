@@ -1,26 +1,31 @@
 import React, { Component } from 'react';
 import ReadSecretComponent from './ReadSecretComponent'
+import getSecret from '../requestHandlers/getSecret'
 
 class ReadSecretPage extends Component {
 
     state = {
-        secret: undefined
+        message: ''
     }
 
     onGetSecret = (secret) => {
-        this.setState(() => ({secret}))
+        const message = secret.message
+        if (!message) {
+            window.location.replace("http://" + secret.url)
+        } else {
+            this.setState(({ message }))
+        }
+    }
+
+    componentDidMount() {
+        getSecret(this.props.match.params.secretKey, this.onGetSecret)
     }
 
     render() {
 
         return (
             <div>
-                Here is your secret: 
-                <ReadSecretComponent
-                    key={this.props.match.params.key}
-                    onGetSecret={this.onGetSecret}
-                    secret={this.state.secret}
-                />
+                {"Here is your secret:" && this.state.message  }
             </div>
         );
     }

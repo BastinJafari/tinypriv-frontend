@@ -1,18 +1,9 @@
 import React from 'react';
-import getSecret from '../requestHandlers/getSecret'
 
-const ReadSecretComponent = (props) => {
+const ReadSecretComponent = (secretMessage) => {
     return (
         <div>
-            {
-                props.secret ?     
-                props.secret :
-                !getSecret(
-                    props.key,
-                    props.onGetSecret
-                )
-                 &&  "Loading"
-            } 
+            <h1>{secretMessage}</h1>
         </div>
     );
 }

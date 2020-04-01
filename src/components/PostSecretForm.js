@@ -3,13 +3,13 @@ import postSecret from '../requestHandlers/postSecret';
 
 class AddSecretForm extends Component {
     state = {
-        msg: '',
+        message: '',
         url: ''
     }
 
     onMessageChange = (e) => {
-        const msg = e.target.value
-        this.setState(() => ({ msg }))
+        const message = e.target.value
+        this.setState(() => ({ message }))
     }
 
     onUrlChange = (e) => {
