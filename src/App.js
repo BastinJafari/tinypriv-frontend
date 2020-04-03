@@ -1,5 +1,10 @@
+//TODO
+// implement Checksum
+
+
+
 import React from 'react';
-import './App.css';
+import './styles/styles.scss';
 import AppRouter from './Router/AppRouter'
 function App() {
   return (
