@@ -1,0 +1,32 @@
+label {
+    font-size: x-large;
+    font-weight: bold;
+    display: flex;
+  }
+
+
+  .urlAndMessageForms {
+    margin-top: $xl-size;
+    max-width: 400px;
+}
+
+.inputForm--url {
+    margin-bottom: $xl-size;
+}
+
+.inputForm--message {
+    margin-bottom: $s-size;
+}
+
+textarea, input{
+    border: 2px solid $gray-200;
+    border-radius: 10px;
+    background-color: $gray-100;
+    color: $gray-800;
+    font-size: $m-size;
+    width: 100%;
+}
+
+textarea {
+    height: 200px;
+}

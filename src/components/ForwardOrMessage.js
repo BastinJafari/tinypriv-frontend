@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import getSecret from '../requestHandlers/getSecret'
+import getSecret from '../utils/requestHandlers/getSecret'
 import ReadSecretPage from './ReadSecretPage'
 class ForwardOrMessage extends Component {
 
