@@ -21,8 +21,6 @@ class ForwardOrMessage extends Component {
         getSecret(this.props.match.params.secretKey, this.onGetSecret)
     }
 
-
-    // <ReadSecretPage message={this.state.message}/>
     render() {
         return (
             <div>

@@ -21,10 +21,12 @@ class PostSecretPage extends Component {
         return (
             <div>
                 <Header/>
-                {this.state.secretPosted ? 
-                    <ShortenedUrl shortenedUrl={this.state.shortenedUrl}/> :
-                    <PostSecretForm onSecretPosted={this.onSecretPosted}/>
-                }
+                <div className="container">
+                    {this.state.secretPosted ? 
+                        <ShortenedUrl shortenedUrl={this.state.shortenedUrl}/> :
+                        <PostSecretForm onSecretPosted={this.onSecretPosted}/>
+                    }
+                </div>
             </div>
         );
     }

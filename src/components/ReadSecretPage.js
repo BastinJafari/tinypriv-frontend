@@ -1,7 +1,7 @@
 import React from 'react';
 
 const ReadSecretPage = (props) => (
-        <div>
+        <div className="container">
             Here is your message: {props.message}
         </div>
 )
