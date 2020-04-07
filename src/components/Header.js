@@ -6,7 +6,7 @@ const Header = () => {
             <div className="container">
                 <div className = "header__content">
                     <h1 className = "header__title">TinyPriv</h1>
-                    <h2 className = "header__subtitle">Make long URLs usable Attach secret messages</h2>
+                    <h2 className = "header__subtitle">Make long URLs short Attach secret messages</h2>
                 </div>
             </div>
         </div>

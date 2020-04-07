@@ -30,7 +30,7 @@ const UrlAndMessageForms = (props) => {
                         value={formik.values.url}
                     />
                     {formik.touched.url && formik.errors.url ? (
-                        <div>{formik.errors.url}</div>
+                        <div className="error">{String.fromCharCode(10006) + formik.errors.url}</div>
                     ): null}
                 </div>
 
