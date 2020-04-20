@@ -1,6 +1,6 @@
 import React from 'react';
 import postSecret from '../utils/requestHandlers/postSecret';
-import {useFormik} from 'formik'
+import { useFormik } from 'formik'
 import validate from '../utils/validate'
 
 const UrlAndMessagePage = (props) => {
@@ -18,12 +18,12 @@ const UrlAndMessagePage = (props) => {
     })
     return (
 
-        <form 
-        className="textForm"
-        onSubmit={formik.handleSubmit}>
+        <form
+            className="textForm"
+            onSubmit={formik.handleSubmit}>
             <div className="inputForm--url">
                 <label htmlFor="url">Url</label>
-                <input 
+                <input
                     id="url"
                     name="url"
                     type="text"
@@ -33,7 +33,7 @@ const UrlAndMessagePage = (props) => {
                 />
                 {formik.touched.url && formik.errors.url ? (
                     <div className="error">{String.fromCharCode(10006) + formik.errors.url}</div>
-                ): null}
+                ) : null}
             </div>
 
 
@@ -46,13 +46,17 @@ const UrlAndMessagePage = (props) => {
                     onBlur={formik.handleBlur}
                     values={formik.values.message}
                 />
+                {formik.touched.message && formik.errors.message ? (
+                    <div className="error">{String.fromCharCode(10006) + formik.errors.message}</div>
+                ) : null}
             </div>
+
 
             <button disabled={formik.isSubmitting} className="button--submit" type="submit">Submit</button>
         </form>
 
     )
 }
- 
+
 
 export default UrlAndMessagePage;

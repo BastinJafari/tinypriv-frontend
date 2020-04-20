@@ -7,8 +7,9 @@ export default (values) => {
         errors.url = 'Required'
     } else if (!isURL(values.url)) {
         errors.url = 'Invalid url '
+    } else if (values.message.length > 1000) {
+        errors.message = 'Message too long '
     }
-
     return errors
 }
 
