@@ -9,7 +9,20 @@ body {
 
 
 button {
+    background-color: darken($color: $blue-900, $amount: 15%);
+    border-radius: 10px;
     cursor: pointer;
+    color: white;
+    font-weight: bold;
+    font-size: $m-size;
+}
+
+.button--submit{
+    min-width: 200px;
+    min-height: $xl-size;
+}
+.button--copy {
+    margin-left: $s-size;
 }
 
 button:disabled {

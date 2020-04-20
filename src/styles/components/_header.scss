@@ -11,7 +11,9 @@
 .header__title {
     color: white;
     font-size: $xl-size;
+    font-weight: bold;
     margin: 0;
+    text-decoration: none;
 }
 
 .header__subtitle {

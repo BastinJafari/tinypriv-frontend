@@ -1,37 +1,40 @@
-import React, { Component } from 'react'
-import UrlAndMessageForms from './UrlAndMessageForms'
-import ShortenedUrl from './ShortenedUrl'
-import Header from '../components/Header'
+import UrlAndMessagePage from './UrlAndMessagePage'
+import ShortUrlPage from './ShortUrlPage'
+import Header from './Header'
+import { Redirect } from 'react-router-dom'
+
+
+import React, { Component } from 'react';
+
 
 class PostSecretPage extends Component {
 
-    state = {
-        secretPosted: false,
-        shortenedUrl: ''
+    state={
+        shortUrl: ''
     }
 
-    onSecretPosted = (shortenedUrl) => {
-        this.setState(() => ({
-            secretPosted: true,
-            shortenedUrl
-        }))
+    onSecretPosted = (shortUrl) => {
+        this.setState({shortUrl})
+    }
+
+    onResetPage = () =>{
+        this.setState({shortUrl: ''})
     }
 
     render() {
         return (
             <div>
-                <Header/>
+                <Header onResetPage={this.onResetPage}/>
                 <div className="container">
-                    {this.state.secretPosted ? 
-                        <ShortenedUrl shortenedUrl={this.state.shortenedUrl}/> :
-                        <UrlAndMessageForms onSecretPosted={this.onSecretPosted}/>
-                    }
+                    {this.state.shortUrl ?
+                    <ShortUrlPage shortUrl={this.state.shortUrl}/> :
+                    <UrlAndMessagePage onSecretPosted={this.onSecretPosted} />
+                }
                 </div>
             </div>
-        );
+        )
     }
 }
 
 export default PostSecretPage;
-
 

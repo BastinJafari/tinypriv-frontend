@@ -8,12 +8,12 @@ const ReadSecretPage = (props) => (
             <div className="textForm">
                 <label htmlFor="secretMessage">Secret Message</label>
                 <p className="warning">
-                    This message was destroyed<br />
+                    This message has been destroyed<br />
                     You should save it
                 </p>                <textarea
                 className= "inputForm--message"
                 readOnly
-                value={props.message}
+                value={"Das ist der Test"}
                 />
             </div>
         </div>

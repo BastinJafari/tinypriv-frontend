@@ -1,5 +1,5 @@
 //TODO
-// implement Checksum
+// fix textarea width
 
 
 

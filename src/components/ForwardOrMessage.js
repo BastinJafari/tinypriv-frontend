@@ -9,7 +9,7 @@ class ForwardOrMessage extends Component {
 
     onGetSecret = (secret) => {
         const message = secret.message
-        console.log(secret.message)
+
         if (!message) {
             window.location.replace("http://" + secret.url)
         } else {

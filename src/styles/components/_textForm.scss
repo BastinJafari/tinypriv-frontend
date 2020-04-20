@@ -6,7 +6,7 @@ label {
   }
 
 
-  .urlAndMessageForms {
+  .textForm {
     margin-top: $xl-size;
     max-width: 400px;
 }
@@ -19,14 +19,24 @@ label {
     margin-bottom: $s-size;
 }
 
+.shortUrlForm {
+    margin-top: $s-size;
+    display: flex;    
+}
+
 textarea, input{
     border: 2px solid $gray-200;
     border-radius: 10px;
     background-color: $gray-100;
+    
     color: $gray-800;
     font-size: $m-size;
     padding: $s-size 5px;
-    width: 100%;
+    width: 96.24%;
+}
+
+.input--shortUrl{
+    max-width: 210px;
 }
 
 textarea {
@@ -41,4 +51,12 @@ textarea:focus {
 .error {
     color: red;
     padding: 5px;
+}
+
+.warning {
+    background-color: $gray-300;
+    font-weight: bold;
+    border-radius: 10px;
+    padding: $s-size;
+    text-align: center;
 }
