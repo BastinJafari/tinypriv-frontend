@@ -5,6 +5,8 @@ import validate from '../utils/validate'
 
 const UrlAndMessagePage = (props) => {
 
+
+
     const formik = useFormik({
         initialValues: {
             url: '',
@@ -14,7 +16,6 @@ const UrlAndMessagePage = (props) => {
             postSecret(values, props.onSecretPosted)
         }
     })
-
     return (
 
         <form 
@@ -47,7 +48,7 @@ const UrlAndMessagePage = (props) => {
                 />
             </div>
 
-            <button className= "button--submit" type="submit">Submit</button>
+            <button disabled={formik.isSubmitting} className="button--submit" type="submit">Submit</button>
         </form>
 
     )

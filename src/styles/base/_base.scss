@@ -26,5 +26,7 @@ button {
 }
 
 button:disabled {
-    cursor: default
+    cursor: default;
+    background-color: gray;
+
 }
