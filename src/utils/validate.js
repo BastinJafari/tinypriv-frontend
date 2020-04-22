@@ -8,7 +8,9 @@ export default (values) => {
         errors.url = 'Invalid url '
     } else if (values.message?.length > 1000) {
         errors.message = 'Message too long '
-    }
+    } else if (values.submitted) {
+        errors.submitted = 'Not yet submitted '
+    } 
     return errors
 }
 

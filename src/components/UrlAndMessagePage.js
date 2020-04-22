@@ -6,20 +6,21 @@ import HelpModalButton from './HelpModalButton'
 const UrlAndMessagePage = (props) => {
 
 
-
     const formik = useFormik({
         initialValues: {
             url: '',
         },
-        validate,
-        onSubmit: (values) => {
-            postSecret(values, props.onSecretPosted)
-        }
+        validate
     })
 
-    return (
+    let submitted = false
 
-       
+    const submitForm = () => {
+        submitted=true
+        postSecret(formik.values, props.onSecretPosted)
+    }
+
+    return (
         <form
             className="textForm"
             onSubmit={formik.handleSubmit}>
@@ -40,7 +41,7 @@ const UrlAndMessagePage = (props) => {
             <div className="inputForm--message">
                 <div className="label--message-container">
                     <label className="label--message" htmlFor="message">Message</label>
-                    <HelpModalButton/>
+                    <HelpModalButton />
                 </div>
                 <textarea
                     id="message"
@@ -54,8 +55,7 @@ const UrlAndMessagePage = (props) => {
                 ) : null}
             </div>
 
-
-            <button disabled={formik.isSubmitting} className="button--submit" type="submit">Submit</button>
+            <button onClick={submitForm} disabled={submitted} className="button--submit" type="submit">Submit</button>
         </form>
 
     )
