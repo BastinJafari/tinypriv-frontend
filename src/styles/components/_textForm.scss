@@ -5,6 +5,17 @@ label {
     padding: 0 5px;
   }
 
+  .label--message {
+    height: auto;
+    position: absolute;
+    bottom: 0px;
+}
+
+.label--message-container {
+    display: flex;
+    position: relative;
+}
+
 
   .textForm {
     margin-top: $xl-size;
@@ -50,7 +61,9 @@ textarea:focus {
 
 .error {
     color: red;
-    padding: 5px;
+    padding-left: 5px;
+    position: absolute;
+    font-size: 16px;
 }
 
 .warning {

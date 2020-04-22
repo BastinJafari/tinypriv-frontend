@@ -38,7 +38,10 @@ const UrlAndMessagePage = (props) => {
 
 
             <div className="inputForm--message">
-                <label htmlFor="message">Message</label>
+                <div className="label--message-container">
+                    <label className="label--message" htmlFor="message">Message</label>
+                    <button className="button--help"> ? </button>
+                </div>
                 <textarea
                     id="message"
                     name="message"

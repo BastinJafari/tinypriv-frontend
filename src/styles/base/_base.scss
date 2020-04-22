@@ -25,6 +25,14 @@ button {
     margin-left: $s-size;
 }
 
+.button--help {
+    width: $xl-size;
+    height: $xl-size;
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+
+}
 button:disabled {
     cursor: default;
     background-color: gray;
