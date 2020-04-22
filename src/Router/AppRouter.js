@@ -7,7 +7,7 @@ const AppRouter = () => {
     return (
         <BrowserRouter>
             <Switch>
-            <Route path="/:staging" component={ReadSecretPage}/>
+            {/* <Route path="/:staging" component={ReadSecretPage}/> */}
 
                 <Route path="/:secretKey" component={ForwardOrMessage}/>
                 <Route path="/" component={PostSecretPage} exact={true} />
