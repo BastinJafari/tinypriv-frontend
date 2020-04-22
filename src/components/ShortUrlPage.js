@@ -1,10 +1,11 @@
 import React from 'react';
+import copy from 'copy-to-clipboard';
 
 const ShortenedUrlPage = (props) => {
 
 
     const copyToClipBoard = () => {
-        navigator.clipboard.writeText(props.shortUrl)
+        copy(props.shortUrl)
     }
 
     return (
