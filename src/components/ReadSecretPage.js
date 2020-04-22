@@ -3,19 +3,18 @@ import Header from './Header'
 
 const ReadSecretPage = (props) => (
     <div>
-        <Header />
+        <Header/>
         <div className="container">
             <div className="textForm">
                 <label htmlFor="secretMessage">Secret Message</label>
-                <textarea
-                    className="inputForm--message"
-                    readOnly
-                    value={props.message}
-                />
                 <p className="warning">
                     This message has been destroyed<br />
                     You should save it
-                </p>
+                </p>                <textarea
+                className= "inputForm--message"
+                readOnly
+                value={props.message}
+                />
             </div>
         </div>
     </div>
