@@ -9,21 +9,23 @@ const HelpModal = ({ modalVisible, toggleVisbility }) => (
         className="helpModal"
         onRequestClose={toggleVisbility}
     >
-        <h1> FAQ </h1>
+        <div onClick={toggleVisbility}>
+            <h1> FAQ </h1>
 
-        <h2>What does this website do?</h2>
+            <h2>What does this website do?</h2>
 
-        <p>Shorten URLs and attach self-destructing messages</p>
+            <p>Shorten URLs and attach self-destructing messages</p>
 
-        <p>After the first visit of the shorted URL, the message becomes visible and destroys itself</p>
+            <p>After the first visit of the shorted URL, the message becomes visible and destroys itself</p>
 
-        <p>Every other visit redirects to the original URL</p>
+            <p>Every other visit redirects to the original URL</p>
 
-        <h2>Why?</h2>
+            <h2>Why?</h2>
 
-        <p>By hiding secret messages behind URLs, it is possible to deny the sending of that message afterward</p>
+            <p>By hiding secret messages behind URLs, it is possible to deny the sending of that message afterward</p>
 
-        <p>From an outside perspective, it's just a shortened URL</p>
+            <p>From an outside perspective, it's just a shortened URL</p>
+        </div>
     </Modal>
 )
 
