@@ -2,7 +2,7 @@ import React from 'react';
 import postSecret from '../utils/requestHandlers/postSecret';
 import { useFormik } from 'formik'
 import validate from '../utils/validate'
-
+import HelpModalButton from './HelpModalButton'
 const UrlAndMessagePage = (props) => {
 
 
@@ -16,8 +16,10 @@ const UrlAndMessagePage = (props) => {
             postSecret(values, props.onSecretPosted)
         }
     })
+
     return (
 
+       
         <form
             className="textForm"
             onSubmit={formik.handleSubmit}>
@@ -35,12 +37,10 @@ const UrlAndMessagePage = (props) => {
                     <div className="error">{String.fromCharCode(10006) + formik.errors.url}</div>
                 ) : null}
             </div>
-
-
             <div className="inputForm--message">
                 <div className="label--message-container">
                     <label className="label--message" htmlFor="message">Message</label>
-                    <button className="button--help"> ? </button>
+                    <HelpModalButton/>
                 </div>
                 <textarea
                     id="message"

@@ -7,7 +7,15 @@ body {
     font-size: $m-size;
 }
 
+p {
+    font-weight: bold;
+    font-size: $m-size;
+    padding: 0 $xl-size;
+}
 
+h2 {
+    color: darken($color: yellow, $amount: 5%);
+}
 button {
     background-color: darken($color: $blue-900, $amount: 15%);
     border-radius: 10px;
@@ -25,7 +33,7 @@ button {
     margin-left: $s-size;
 }
 
-.button--help {
+.button--helpModal {
     width: $xl-size;
     height: $xl-size;
     position: absolute;
