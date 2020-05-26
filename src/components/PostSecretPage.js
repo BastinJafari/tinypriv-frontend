@@ -2,7 +2,7 @@ import UrlAndMessagePage from './UrlAndMessagePage'
 import ShortUrlPage from './ShortUrlPage'
 import Header from './Header'
 import { Redirect } from 'react-router-dom'
-
+import Footer from './Footer'
 
 import React, { Component } from 'react';
 
@@ -23,7 +23,7 @@ class PostSecretPage extends Component {
 
     render() {
         return (
-            <div>
+            <>
                 <Header onResetPage={this.onResetPage}/>
                 <div className="container">
                     {this.state.shortUrl ?
@@ -31,7 +31,8 @@ class PostSecretPage extends Component {
                     <UrlAndMessagePage onSecretPosted={this.onSecretPosted} />
                 }
                 </div>
-            </div>
+                <Footer onResetPage={this.onResetPage}></Footer>
+</>
         )
     }
 }

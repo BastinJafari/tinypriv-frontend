@@ -1,5 +1,6 @@
 import React from 'react'
 import Header from './Header'
+import Footer from './Footer'
 
 const ReadSecretPage = (props) => (
     <div>
@@ -18,6 +19,7 @@ const ReadSecretPage = (props) => (
                     You should save it
             </p>   
         </div>
+        <Footer/>
     </div>
 )
 
